@@ -4,9 +4,6 @@ import LinkedIn from '@material-ui/icons/LinkedIn';
 import GitHub from '@material-ui/icons/GitHub';
 import Email from '@material-ui/icons/Email';
 import { Tooltip } from '@material-ui/core';
-import Row from "../Row";
-import Col from "../Col";
-
 
 function Footer() {
   return (
