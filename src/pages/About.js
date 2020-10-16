@@ -6,20 +6,57 @@ import Col from "../components/Col";
 
 function About() {
   return (
-    <div>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>Portfolio</h1>
-        <h2>They're the Good Boys and Girls</h2>
+    <div style={{
+      justifyContent: 'center',
+      dislay: 'flex',
+      alignItems: 'center'
+      }}>
+      <Hero backgroundImage="https://github.com/richard2878/Richar-A-Portfolio/blob/main/src/images/Hero%20Image.jpg?raw=true">
+      <center><Row>
+          <Col size="md6">
+            <h3 style={{
+                marginTop: '100px', 
+                marginLeft: '100px', 
+                padding: '10px', 
+                color:'#DEB841'}}>Language</h3>
+          <ul style={{ 
+                marginLeft: '100px', 
+                color:'white', 
+                padding:0}}>
+            <li>CSS</li>
+            <li>HTML</li>
+            <li>JAVASCRIPT</li>
+          </ul>
+          </Col>
+
+          <Col size="md6">
+            <h3 style={{marginTop: '100px', 
+                marginLeft: '100px', 
+                padding: '10px', 
+                color:'#DEB841'}}>Design Tools</h3>
+          <ul style={{ marginLeft: '100px', color:'white', padding:0}}>
+            <li>ADOBE CREATIVE SUITE</li>
+            <li>GOOGLE FONTS</li>
+            <li>MATERIAL UI</li>
+            <li>BOOTSTRAP</li>
+            <li>FIGMA</li>
+          </ul>
+          </Col>
+
+        </Row></center>
       </Hero>
+     
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome To Pupster!</h1>
+            <h1>Welcome to my portfolio!</h1>
           </Col>
         </Row>
         <Row>
           <Col size="md-12">
-            <p>
+            <p style={{
+              justifySelf: 'left'
+            }}>
               My name is Richard Antolin, I am a designer with an background in architecture.  I have learned early on that tools must function in way that humans feel comfortable when using them. 
               Otherwise they will find other tools that will make the job easier to perform.  As a designer, I have responsibilty to provide products that are ageless and long lasting. Wether that is through
               the Apps I've built or the buildings that I have designed, the result should always be that "Form follows Function."  
