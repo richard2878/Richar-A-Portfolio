@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import Logo from "../Logo";
+import Info from '@material-ui/icons/Info';
+import Laptop from '@material-ui/icons/Laptop';
+import { Tooltip } from '@material-ui/core';
 
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
@@ -30,13 +33,14 @@ function Navbar() {
         flex: 1,      
         fontSize:'90px',
         fontWeight:400,
-        padding: '10px',
         color: '#6D6A75',
+        marginLeft: '10px',
+        marginBottom: '-50px',
         fontFamily: 'Source Sans Pro, sans-serif',
         textShadow: '3px 3px WHITE',}}>Richard Antolin</text><br/>
         <text style={{
           marginTop: '100px',
-          color: '#37323E',
+          color: 'white',
           marginLeft: '15px',
           fontSize:'20px',
           textShadow: '2px 2px #white',
@@ -47,75 +51,64 @@ function Navbar() {
 
       <div>
         <ul className="navbar-nav"
-            style={{
-              marginLeft: "17px",
-              marginTop: "30px",
-            }}
-                      >
-          <li className="nav-item"
-          >
-            <Link
-              className= "Iconbuttons"
-              style={{
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: '18px',
-                fontWeight:400,
-                color: "white",
-                backgroundColor: '#DE9E36',
-                borderRadius: '8px 0px 8px 0px',
-                boxShadow: '3px 3px',
-                textAlign: 'center',
-                width: '120px',
-                padding: '10px',
-                marginRight: '40px',
-                marginTop: '40px'
-              
-              }}
-              to="/"
-              className={
-                window.location.pathname === "/" || window.location.pathname === "/about"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              About
-            </Link>
-          </li>
+          style={{marginLeft: "50px",marginTop: "30px",}}>
+          <Tooltip title='About Me'>
+            <li className="nav-item">
+                <Link
+                  className= "Iconbuttons"
+                  style={{
+                    fontFamily: 'Montserrat, sans-serif',
+                    fontSize: '18px',
+                    fontWeight:400,
+                    color: "white",
+                    backgroundColor: '#DEB841',
+                    borderRadius: '8px 0px 8px 0px',
+                    boxShadow: '3px 3px',
+                    textAlign: 'center',
+                    width: '150px',
+                    padding: '10px',
+                    marginRight: '50px',
+                    marginTop: '90px'
+                  }}
+                  to="/"
+                  className={
+                    window.location.pathname === "/" || window.location.pathname === "/about"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  About
+                <Info style={{fontSize:'30px', marginLeft:'10px'}}/>
+                </Link>
+            </li>
+          </Tooltip>
+          <Tooltip title='My Work'>
+            <li className="nav-item">
+              <Link
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: '18px',
+                  fontWeight:400,
+                  color: "white",
+                  backgroundColor: '#DEB841',
+                  borderRadius: '8px 0px 8px 0px',
+                  boxShadow: '3px 3px',
+                  textAlign: 'center',
+                  width: '150px',
+                  padding: '10px',
+                  marginRight: '50px',
+                  marginTop: '90px'
+                }}
+                
+                to="/portfolio"
+                className={window.location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}
+              >
+                Portfolio
+              <Laptop style={{fontSize:'30px', marginLeft:'10px'}}/>
+              </Link>
+            </li>
+          </Tooltip>
           <li className="nav-item">
-            <Link
-              style={{
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: '18px',
-                fontWeight:400,
-                color: "white",
-                backgroundColor: '#DE9E36',
-                borderRadius: '8px 0px 8px 0px',
-                boxShadow: '3px 3px',
-                textAlign: 'center',
-                width: '120px',
-                marginRight: '40px',
-                marginTop: '40px'
-              }}
-              
-              to="/portfolio"
-              className={window.location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}
-            >
-              Portfolio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              style={{
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: '1px',
-                fontWeight:400,
-                color: "white"
-              }}
-              to="/search"
-              className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-            >
-              Search
-            </Link>
           </li>
         </ul>
       </div>

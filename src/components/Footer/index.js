@@ -2,26 +2,32 @@ import React from "react";
 import "./style.css";
 import LinkedIn from '@material-ui/icons/LinkedIn';
 import GitHub from '@material-ui/icons/GitHub';
+import Email from '@material-ui/icons/Email';
+import { Tooltip } from '@material-ui/core';
 import Row from "../Row";
 import Col from "../Col";
 
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{height:'120px'}}>
       <center><span>R.A. Portfolio 2020</span></center>
+      
+      
 
           <center>
-            <LinkedIn 
-            style={{
-              color: '#DEB841',
-              fontSize: '60px',
-              margin: 0}}/>
-            <GitHub
-            style={{
-              color: '#DEB841',
-              fontSize: '45px',
-              margin: 0}}/>
+            <Tooltip title="LinkedIn"><a className="Iconbuttons" href={"https://www.linkedin.com/in/richard-antolin/"}><LinkedIn
+                      style={{ fontSize: 55, minWidth:'120px', color:'#DEB841', marginTop:'3px'}} 
+                      label="LinkedIn" 
+                      /></a></Tooltip>
+            <Tooltip title="GitHub"><a className="Iconbuttons" href={"https://github.com/richard2878"}><GitHub
+                      style={{ fontSize: 45, minWidth:'120px', color:'#DEB841', marginTop:'3px'}} 
+                      label="GitHub" 
+                      /></a></Tooltip>
+            <Tooltip title="Email"><a className="Iconbuttons" href={"/email"}><Email
+                      style={{ fontSize: 55, minWidth:'120px', color:'#DEB841', marginTop:'3px'}} 
+                      label="Email" 
+                      /></a></Tooltip>
           </center>
 
     </footer>
