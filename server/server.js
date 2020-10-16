@@ -1,7 +1,11 @@
 const express = require("express");
 const routes = require("./routes");
 const app = express();
+const path = require('path');
 const PORT = process.env.PORT || 8888;
+
+const publicPath = path.join(__dirname, '..', 'public');
+app.use(express.static(publicPath));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
